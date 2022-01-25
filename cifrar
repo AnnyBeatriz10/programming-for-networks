@@ -1,0 +1,11 @@
+chave = "d"
+texto = input("Texto a cifrar :")
+cifrado = ""
+p = 0
+for l in texto:
+   nl = chr(ord(l) +3) # +3 ou ord(chave[p] - ord("a")
+   cifrado += nl
+   p += 1
+   if p == len(chave):
+         p = 0
+print(cifrado)

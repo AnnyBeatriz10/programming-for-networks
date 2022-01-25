@@ -1,59 +1,42 @@
+# Leia uma string e uma letra no alfabeto e mostre o string no alfabeto da letra(usar apenas letras maiúsculas)
+#s = (input("Digite um texto (maiúsculo):"))
+#letra = (input("Informe uma letra (maiúscula):"))
+
+#for letra in s:
+#     print("o código ASCII da letra informada é:",ord(letra))
+#else:
+  #print("Essa letra não faz parte do texto informado")
+  
+#s =  (input("Digite o código do texto:"))
+#letra = (input("Informe o código da letra:"))
+#lista = []
+
+#for i in s:
+#   print("o texto do código informado é", chr(i))
+#   s.append(lista)
+#   for letra in lista:
+#     print("o a letra correspondente é", chr(letra))
+#     if letra in lista == False:
+#        print("o código não faz parte do texto")
+
+cifrado = input("Texto a decifrar : ")
+texto = ""
+for c in cifrado:
+  l = chr(ord(c) -1)
+  texto += l
+print(texto)
 
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import json
-import requests
-import psycopg2
-import cgi
+# mostrar as próximas letras do texto: 
 
-form = cgi.FieldStorage()
+#texto = input("Texto a cifrar :")
+#cifrado = ""
 
-nome = form.getvalue("nome")
-matricula = form.getvalue("matricula")
-email = form.getvalue("email")
-situacao = form.getvalue("situacao")
-curso = form.getvalue("curso")
-campus = form.getvalue("campus")
+#for l in texto:
+#   nl = chr(ord(l) + 1)
+#   cifrado += nl
+# print(cifrado)
 
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
-
-conn = psycopg2.connect("dbname=postgres user=postgres host=127.0.0.1 password=123")
-conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-cur = conn.cursor()
-cria_database = ("CREATE DATABASE aluno;")
-cur.execute(cria_database)
-conn.close()
-cur.close()
-
-conn = psycopg2.connect("dbname=aluno user=postgres host=127.0.0.1 password=123")
-cur = conn.cursor()
-cria_tab = """ 
-          CREATE TABLE dados(
-		nome varchar(100) not null, 
-		matricula int primary key not null unique,
-		email varchar(100) not null,
-		situacao char(30) not null,
-		curso varchar(200) not null,
-		campus varchar(200) not null
-		);"""
-cur.execute(cria_tab)
-conn.commit()
-conn.close()
-cur.close()
-
-inserindo = ("INSERT INTO dados(nome,matricula,email,situacao,curso,campus) Values ('{}','{}','{}','{}','{}','{}') ".format(nome,matricula,email,situacao.curso,campus))
-cur.execute(inserindo)
-conn.commit()
-
-
-
-print("Content-type:text/html\n\n")
-print("<html>")
-print("<head>")
-print("</head>")
-print("<body><h1>Banco</h1></body>")
-print("</html>")
-
-
+# O LIVRO DOS CÓDIGOS
+   
 

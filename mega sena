@@ -1,0 +1,10 @@
+lista = eval(input("Digite oito números: "))
+resultado = [0]*6 
+pos = 0 
+
+for i in lista:
+   for i in range(len(i)):
+      if len() == 6:
+      pos += 1
+      resultado.append(lista[pos])
+print(resultado)

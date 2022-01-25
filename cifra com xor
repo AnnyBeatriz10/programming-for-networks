@@ -1,0 +1,13 @@
+texto_1 = input("Digite uma letra: ")
+texto_2 = input("Digite uma letra: ")
+texto_3 = input("Digite uma letra: ")
+texto_4 = input("Digite uma letra: ")
+letra = input("Informe uma letra:")
+cifrax = 0
+
+for letra in texto_1 and texto_2 and texto_3 and texto_4:
+   cifrado = ord[(texto_1),(texto_2),(texto_3),(texto_4)]
+   cifrado_letra = ord(letra)
+   cifrax = cifrado ^ cifrado_letra
+print(cifrax)
+print(chr(cifrax))
