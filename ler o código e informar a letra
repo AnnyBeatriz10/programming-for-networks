@@ -1,0 +1,10 @@
+# Leia um string codificado e uma letra do alfabeto codificada e mostre o strng decodificado
+
+s = int(input("Digite o código do texto:"))
+letra = int(input("Informe o código da letra:"))
+
+for i in range(s):
+   print("o texto do código informado é:", chr(i))
+for letra in s:
+   if letra in s == True:
+       print("a letra correspondente é:", chr(letra))

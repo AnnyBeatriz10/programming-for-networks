@@ -1,0 +1,6 @@
+cifrado = input("Texto a decifrar : ")
+texto = ""
+for c in cifrado:
+  l = chr(ord(c) -1)
+  texto += l
+print(texto)
